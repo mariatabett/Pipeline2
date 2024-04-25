@@ -3,13 +3,11 @@ pipeline {
     
     environment {
         // Définir les variables d'environnement si nécessaire
-        GIT_URL = 'https://github.com/Bazthos/Nodes---Github-Push.git'
-        PROJECT_DIR = 'Nodes---Github-Push'
+        GIT_URL = 'https://github.com/mariatabett/Pipeline2.git'
+        PROJECT_DIR = 'Pipeline2'
     }
 
     stages {
-        
-
         stage('Clone Repository') {
             steps {
                 script {
