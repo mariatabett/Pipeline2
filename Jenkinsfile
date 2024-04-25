@@ -8,28 +8,7 @@ pipeline {
     }
 
     stages {
-        stage('Prepare Classses') {
-            steps {
-                script {
-                    // Vérifier si le dossier existe et le nettoyer
-                    if (isUnix()) {
-                        sh """
-                        if [ -d "${PROJECT_DIR}" ]; then
-                            echo "Cleaning existing directory"
-                            rm -rf ${PROJECT_DIR}
-                        fi
-                        """
-                    } else {
-                        powershell """
-                        if (Test-Path -Path "${PROJECT_DIR}") {
-                            Write-Host "Cleaning existing directory"
-                            Remove-Item "${PROJECT_DIR}" -Force -Recurse
-                        }
-                        """
-                    }
-                }
-            }
-        }
+        
 
         stage('Clone Repository') {
             steps {
