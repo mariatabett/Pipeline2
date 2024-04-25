@@ -15,7 +15,7 @@ pipeline {
                     if (isUnix()) {
                         sh "git clone ${GIT_URL}"
                     } else {
-                        bat "git clone ${GIT_URL}"
+                        powershell "git clone ${GIT_URL}"
                     }
                 }
             }
